@@ -30,37 +30,37 @@ namespace Main
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.NorthwindDataSet = new Main.NorthwindDataSet();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.sp_ProductosVendidosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.NorthwindDataSet = new Main.NorthwindDataSet();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.sp_ProductosVendidosTableAdapter = new Main.NorthwindDataSetTableAdapters.sp_ProductosVendidosTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.NorthwindDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sp_ProductosVendidosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NorthwindDataSet)).BeginInit();
             this.SuspendLayout();
             // 
-            // reportViewer1
+            // sp_ProductosVendidosBindingSource
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource2.Name = "ProductosVendidosDataSet";
-            reportDataSource2.Value = this.sp_ProductosVendidosBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Main.ProductosVendidos.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1287, 650);
-            this.reportViewer1.TabIndex = 0;
+            this.sp_ProductosVendidosBindingSource.DataMember = "sp_ProductosVendidos";
+            this.sp_ProductosVendidosBindingSource.DataSource = this.NorthwindDataSet;
             // 
             // NorthwindDataSet
             // 
             this.NorthwindDataSet.DataSetName = "NorthwindDataSet";
             this.NorthwindDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // sp_ProductosVendidosBindingSource
+            // reportViewer1
             // 
-            this.sp_ProductosVendidosBindingSource.DataMember = "sp_ProductosVendidos";
-            this.sp_ProductosVendidosBindingSource.DataSource = this.NorthwindDataSet;
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "ProductosVendidosDataSet";
+            reportDataSource1.Value = this.sp_ProductosVendidosBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Main.Views.ProductosVendidos.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(1287, 650);
+            this.reportViewer1.TabIndex = 0;
             // 
             // sp_ProductosVendidosTableAdapter
             // 
@@ -76,8 +76,8 @@ namespace Main
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProductosVendidosView";
             this.Load += new System.EventHandler(this.ProductosVendidosView_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.NorthwindDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sp_ProductosVendidosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NorthwindDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }

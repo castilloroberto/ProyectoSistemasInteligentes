@@ -64,33 +64,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Database\Conexion.cs" />
-    <Compile Include="Database\Productos.cs" />
-    <Compile Include="InicioSesion.cs">
+    <Compile Include="Database\Consultas.cs" />
+    <Compile Include="Database\Parametro.cs" />
+    <Compile Include="Views\InicioSesion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InicioSesion.Designer.cs">
+    <Compile Include="Views\InicioSesion.Designer.cs">
       <DependentUpon>InicioSesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
     <Compile Include="NorthwindDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>NorthwindDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="ProductosVendidosView.cs">
+    <Compile Include="Views\ProductosVendidosView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProductosVendidosView.Designer.cs">
+    <Compile Include="Views\ProductosVendidosView.Designer.cs">
       <DependentUpon>ProductosVendidosView.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <EmbeddedResource Include="InicioSesion.resx">
+    <EmbeddedResource Include="Views\InicioSesion.resx">
       <DependentUpon>InicioSesion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProductosVendidos.rdlc" />
-    <EmbeddedResource Include="ProductosVendidosView.resx">
+    <EmbeddedResource Include="Views\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ProductosVendidos.rdlc" />
+    <EmbeddedResource Include="Views\ProductosVendidosView.resx">
       <DependentUpon>ProductosVendidosView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -142,5 +151,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

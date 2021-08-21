@@ -16,7 +16,7 @@ namespace Main
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ProductosVendidosView());
+            Application.Run(new InicioSesion());
         }
     }
 }
